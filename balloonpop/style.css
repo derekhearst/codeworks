@@ -13,6 +13,22 @@ body {
 	color: whitesmoke;
 	font-family: 'DynaPuff', cursive;
 	font-size: large;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 70%;
+	margin: auto;
+}
+
+@media screen and (max-width:700px) {
+	body {
+		width: 100%;
+	}
+
+}
+
+header {
+	align-self: center;
 }
 
 button {
@@ -45,39 +61,52 @@ input {
 
 form {
 	margin: 0;
-	height: 30px;
 	align-items: center;
 }
 
-main {
-	width: 70%;
-	margin: auto;
-}
-
-img {
-	max-width: 100%;
-}
 
 .pump {
 	height: 130px;
 	width: 180px;
 	position: relative;
+	margin-top: 200;
 }
 
-.pumpbase {}
+.pump:active .handle {
+	top: -20px;
+}
+
+.pumpbase {
+	background-color: whitesmoke;
+	width: 100;
+	height: 130;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	z-index: 0;
+	z-index: 2;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+}
 
 .handle {
+	left: 8px;
 	height: 10;
 	width: 80;
+	top: -80;
 	position: absolute;
-	background-color: red;
+	background-color: var(--primary);
 	display: flex;
 	justify-content: center;
+	transition: all 0.05s linear;
+	z-index: 1;
 }
 
 .handle::before {
 	content: "";
-	background-color: red;
+	background-color: var(--primary);
 	width: 10px;
 	height: 80px;
 	display: block;
@@ -88,12 +117,51 @@ img {
 	width: 100px;
 	background-color: var(--primary);
 	border-radius: 50%;
-	transition: all .2s ease
+	transition: all .2s ease;
+	animation: balloon-float 5s ease-in-out infinite;
+	align-self: flex-end;
+	margin: 0 auto;
+	box-shadow: inset -10px -10px 12px rgba(0, 0, 0, 0.5)
 }
+
+.balloon.blue {
+	background-color: blue;
+}
+
+.balloon.red {
+	background-color: red;
+}
+
+.balloon.yellow {
+	background-color: yellow;
+}
+
+.balloon.purple {
+	background-color: purple;
+}
+
+
+
+@keyframes balloon-float {
+
+	0%,
+	100% {
+		transform: translateY(-45) rotate(10deg);
+	}
+
+	50% {
+		transform: translateY(0) rotate(-10deg);
+	}
+}
+
+#gameview {
+	height: 400px;
+}
+
 
 .card {
 	background-color: var(--dark);
-	padding: 1em;
+	padding: 10px;
 	box-shadow: 2px 0 8px var(--shadow);
 	border-radius: 8px;
 }
@@ -103,11 +171,21 @@ img {
 }
 
 .logo-container {
-	width: 50%;
+	width: 100%;
 	margin: auto;
 }
 
+#click-count {
+	color: black;
+	font-size: 30;
 
+}
+
+#scoreboard {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
 
 
 /* UTILITY CLASSES */
@@ -123,8 +201,8 @@ img {
 	justify-content: space-evenly;
 }
 
-.m3 {
-	margin-top: 0.5em;
+.text-center {
+	text-align: center;
 }
 
 .hidden {

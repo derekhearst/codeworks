@@ -8,14 +8,18 @@ let height = 120
 let maxSize = 300
 let inflationRate = 20
 let currPopCount = 0
-let gameLength = 5000
+let gameLength = 10000
 let clockID = 0
 let timeRemaining = 0
 let currPlayer
+let currentColor = "green"
+let possibleColors = ["red", "yellow", "blue", "green", "purple"]
+
 
 function startGame() {
 	document.getElementById("controls").classList.add("hidden")
 	document.getElementById("gameview").classList.remove("hidden")
+	document.getElementById("scoreboard").classList.add("hidden")
 
 	startClock()
 	setTimeout(stopGame, gameLength)
@@ -40,12 +44,22 @@ function inflate() {
 	height += inflationRate
 	width += inflationRate
 	if (height > maxSize) {
+		let balloonE = document.getElementById("balloon")
+		balloonE.classList.remove(currentColor)
+		currentColor = getRandomColor()
+		balloonE.classList.add(currentColor)
 		height = 20
 		width = 0
 		currPopCount++
+		document.getElementById("audioBurst").play()
+
 	}
 	clickCount++
 	draw()
+}
+
+function getRandomColor() {
+	return possibleColors[Math.floor(Math.random() * 5)]
 }
 
 function draw() {
@@ -67,6 +81,7 @@ function stopGame() {
 	console.log("Game Over!")
 	document.getElementById("controls").classList.remove("hidden")
 	document.getElementById("gameview").classList.add("hidden")
+	document.getElementById("scoreboard").classList.remove("hidden")
 
 	clickCount = 0
 	height = 120
@@ -75,11 +90,14 @@ function stopGame() {
 	if (currPlayer.topScore < currPopCount) {
 		currPlayer.topScore = currPopCount
 	}
-	clickCount = 0
+
 	currPopCount = 0
+
+
 	savePlayers()
 	stopClock()
 	draw()
+	drawScoreBoard()
 }
 
 //#endregion Game Logic
@@ -88,6 +106,7 @@ function stopGame() {
 
 let players = []
 loadPlayers()
+
 function setPlayer(event) {
 	event.preventDefault()
 	let form = event.target
@@ -104,6 +123,7 @@ function setPlayer(event) {
 	document.getElementById("game").classList.remove("hidden")
 	document.getElementById("playerform").classList.add("hidden")
 	draw()
+	drawScoreBoard()
 }
 
 function changePlayer() {
@@ -119,4 +139,21 @@ function loadPlayers() {
 	players = JSON.parse(localStorage.getItem("players"))
 	if (!players) { players = [] }
 }
+
+function drawScoreBoard() {
+	let template = ""
+	players.sort((p1, p2) => p2.topScore - p1.topScore)
+	players.forEach(element => {
+		template += `
+		<div class="d-flex space-between">
+		<span>
+			<i class="fa fa-user"></i>
+			${element.name}
+		</span>
+		<span>Score : ${element.topScore}</span>
+	</div>`
+	});
+	document.getElementById("scoreboard").innerHTML = template
+}
+drawScoreBoard()
 //#endregion
