@@ -1,11 +1,132 @@
-body{
-	background-color: wheat;
+:root {
+	--primary: rgb(132, 255, 0);
+	--primarydark: rgb(85, 164, 0);
+	--background: #252526;
+	--dark: #2b2b2b;
+	--darklight: #3a3a3a;
+	--shadow: rgba(0, 0, 0, 0.2);
 
 }
 
-.balloon{
+body {
+	background-color: var(--background);
+	color: whitesmoke;
+	font-family: 'DynaPuff', cursive;
+	font-size: large;
+}
+
+button {
+	background-color: var(--primary);
+	border-radius: 4px;
+	margin: 8px;
+	font-family: 'DynaPuff', cursive;
+	text-transform: uppercase;
+	border: 0px;
+
+	height: 30px;
+
+	width: 200px;
+	transition: all .2s ease
+}
+
+button:hover {
+	background-color: var(--primarydark);
+}
+
+input {
+	border-radius: 4px;
+	border: none;
+	margin: 2px 0px;
+	font-family: 'DynaPuff', cursive;
+	background-color: whitesmoke;
+	outline: none;
+
+}
+
+form {
+	margin: 0;
+	height: 30px;
+	align-items: center;
+}
+
+main {
+	width: 70%;
+	margin: auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+.pump {
+	height: 130px;
+	width: 180px;
+	position: relative;
+}
+
+.pumpbase {}
+
+.handle {
+	height: 10;
+	width: 80;
+	position: absolute;
+	background-color: red;
+	display: flex;
+	justify-content: center;
+}
+
+.handle::before {
+	content: "";
+	background-color: red;
+	width: 10px;
+	height: 80px;
+	display: block;
+}
+
+.balloon {
 	height: 120px;
 	width: 100px;
-	background-color: lime;
+	background-color: var(--primary);
 	border-radius: 50%;
+	transition: all .2s ease
+}
+
+.card {
+	background-color: var(--dark);
+	padding: 1em;
+	box-shadow: 2px 0 8px var(--shadow);
+	border-radius: 8px;
+}
+
+.card.light {
+	background-color: var(--darklight);
+}
+
+.logo-container {
+	width: 50%;
+	margin: auto;
+}
+
+
+
+
+/* UTILITY CLASSES */
+.d-flex {
+	display: flex;
+}
+
+.d-flex.space-between {
+	justify-content: space-between;
+}
+
+.d-flex.space-evenly {
+	justify-content: space-evenly;
+}
+
+.m3 {
+	margin-top: 0.5em;
+}
+
+.hidden {
+	display: none !important;
 }

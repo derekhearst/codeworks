@@ -5,22 +5,67 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Balloon Pop</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-	<div>
-		<button onclick="startGame()" id="start-game-button">Start game!</button>
-	</div>
-	<button onclick="inflate()" disabled="true" id="inflate-button">inflate
-		<span id="click-count">0</span>
-	</button>
-	<div>
-		<span>Balloons Popped</span>
-		<span id="pop-count">0</span>
-	</div>
-	<div id="balloon" class="balloon"></div>
+	<header>
+		<div class="logo-container m3">
+			<img src="./assets/clipart2103447.png" alt="Pop the Balloons!">
+		</div>
+	</header>
+
+	<main>
+
+		<form class="d-flex card space-between hidden" id="playerform" onsubmit="setPlayer(event)">
+			<div>
+				<label for="name">Name : </label>
+				<input class="smallCorner" type="text" required name="playername">
+			</div>
+			<button class="smallCorner" type="submit">Ok</button>
+		</form>
+
+		<section id="game" class="game m3 card">
+			<div class="card light m3 d-flex space-between">
+				<div>
+					Player : <span id="playername"></span>
+				</div>
+				<div>
+					High Score : <span id="high-score-count">0</span>
+				</div>
+			</div>
+
+			<div id="control" class="d-flex hidden space-evenly">
+				<button onclick="changePlayer()">Change Player</button>
+				<button onclick="startGame()" id="start-game-button">Start game!</button>
+			</div>
+
+			<div id="gameview" class="">
+				<button onclick="inflate()" id="inflate-button">
+					Inflate!
+					<span id="click-count">0</span>
+				</button>
+
+				<div>
+					Balloons Popped : <span id="pop-count">0</span>
+				</div>
+				<div>
+					Time Remaining : <span id="time-remaining">5</Span> seconds
+				</div>
+				<div class="d-flex">
+					<div class="pump">
+						<div class="handle"></div>
+						<div class="pumpbase"></div>
+					</div>
+					<div id="balloon" class="balloon"></div>
+				</div>
+			</div>
+		</section>
+	</main>
 	<script src="script.js"></script>
 </body>
 
