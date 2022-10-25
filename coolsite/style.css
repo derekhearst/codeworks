@@ -1,26 +1,58 @@
-.flex {
-	display: flex;
-	justify-content: center;
-}
-
-.horizontal {
-	flex-direction: row;
-}
-
 body {
 	margin: 0px;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+	font-weight: normal;
+}
+
+
+header {
+	background-color: navy;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 70px;
+	border: 4px solid black;
+}
+
 main {
-	margin: 30px;
+	display: flex;
+	justify-content: space-between;
+	margin: .5em;
+	margin-top: 1em;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: navy;
+	height: 40px;
+	width: 100%;
+	border: 5px solid black;
+}
+
+
+
+.posts {
+	max-width: 48%;
+	margin-left: 20%;
 }
 
 .post {
-	display: flex;
-	padding: 0px 50px;
-	max-width: 85ch;
-	flex-direction: column;
-	align-items: center;
+	max-width: 90%;
+	margin: auto;
+}
+
+.post h2 {
+	text-align: center;
 }
 
 .weirdBar {
@@ -29,49 +61,75 @@ main {
 	background-color: lightblue;
 }
 
-.Articles {
+.articles {
 	width: 30%;
-	font-size: small;
+
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	margin-bottom: .5em;
+}
+
+.article h1 {
+	width: 90%;
+	margin: 0;
+}
+
+.article p {
+	width: 90%;
+	font-size: .9em;
 }
 
 .image {
-	width: 100px;
+	width: 100%;
 	height: 100px;
-	background-color: blue;
+	background-color: #4a86e8;
+	display: flex;
 	text-align: center;
-	color: white;
-}
-
-header {
-	background-color: navy;
-	color: white;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	border: 4px solid black;
+	color: white;
 }
 
-footer {
-	background-color: navy;
-	height: 40px;
-	width: 100%;
-	border: 4px solid black;
+
+
+@media (max-width: 600px) {
+	.posts {
+		margin-left: 0;
+		max-width: 69%;
+	}
+
+	.articles {
+		max-width: 29%;
+	}
 }
 
-@media screen and (max-width: 600px) {
-	.horizontal {
-		flex-direction: column;
-	}
+.m1 {
+	margin: 1em;
+}
 
-	.Articles {
-		width: auto;
-	}
+.p1 {
+	padding: 1em;
+}
 
-	main {
-		margin: 5px;
-	}
+.flex {
+	display: flex;
+}
 
-	.post {
-		padding: 5px;
-	}
+.hc {
+	justify-items: center;
+	justify-content: space-between;
+}
+
+.vc {
+	align-items: center;
+	align-content: space-between;
+}
+
+.fv {
+	flex-direction: column;
 }
