@@ -1,6 +1,7 @@
 main {
-	background: rgba(0, 0, 0, .7) url(https://s3-alpha-sig.figma.com/img/d2f2/4fa4/e719da3be05429a9e067d5ef4cfbb91b?Expires=1668384000&Signature=eNiYVgX~Zz0C1PsPe0DM34TVqzVTXxSQB87i1S81NeHah~d-Of38JTyKkb1dmh3oR4ssHCBL30cuUmOW9o4sm9qAbLhdOBvAr~wAohslSlCR7P-b6hq~B27wl5fwO~VfOij8F7yRGwzwFvBGl7boYe6A~PF9TNgXqflfoHEHO1m9I4Jb-hHAq53zia-qQAwbSUUXruS2y~wlNgDIklzgjHjbLXaMeUu~vSb99LOob5R2bILXVkId~D0j3Bk6T5nd6Yim6KJotsm-~5yvBRPuOS9DdoelS8xVvEwdJlFG0EQxyFQxvilDZUsTsJ3FEvGbOt3BPLRpYt8dxZ4dObgEyQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
-	background-size: contain;
+	background: rgba(0, 0, 0, .9) url(https://s3-alpha-sig.figma.com/img/d2f2/4fa4/e719da3be05429a9e067d5ef4cfbb91b?Expires=1668384000&Signature=eNiYVgX~Zz0C1PsPe0DM34TVqzVTXxSQB87i1S81NeHah~d-Of38JTyKkb1dmh3oR4ssHCBL30cuUmOW9o4sm9qAbLhdOBvAr~wAohslSlCR7P-b6hq~B27wl5fwO~VfOij8F7yRGwzwFvBGl7boYe6A~PF9TNgXqflfoHEHO1m9I4Jb-hHAq53zia-qQAwbSUUXruS2y~wlNgDIklzgjHjbLXaMeUu~vSb99LOob5R2bILXVkId~D0j3Bk6T5nd6Yim6KJotsm-~5yvBRPuOS9DdoelS8xVvEwdJlFG0EQxyFQxvilDZUsTsJ3FEvGbOt3BPLRpYt8dxZ4dObgEyQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+	background-size: cover;
+
 }
 
 #scoreboard {
