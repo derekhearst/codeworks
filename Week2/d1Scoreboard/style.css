@@ -1,0 +1,50 @@
+main {
+	background: rgba(0, 0, 0, .7) url(https://s3-alpha-sig.figma.com/img/d2f2/4fa4/e719da3be05429a9e067d5ef4cfbb91b?Expires=1668384000&Signature=eNiYVgX~Zz0C1PsPe0DM34TVqzVTXxSQB87i1S81NeHah~d-Of38JTyKkb1dmh3oR4ssHCBL30cuUmOW9o4sm9qAbLhdOBvAr~wAohslSlCR7P-b6hq~B27wl5fwO~VfOij8F7yRGwzwFvBGl7boYe6A~PF9TNgXqflfoHEHO1m9I4Jb-hHAq53zia-qQAwbSUUXruS2y~wlNgDIklzgjHjbLXaMeUu~vSb99LOob5R2bILXVkId~D0j3Bk6T5nd6Yim6KJotsm-~5yvBRPuOS9DdoelS8xVvEwdJlFG0EQxyFQxvilDZUsTsJ3FEvGbOt3BPLRpYt8dxZ4dObgEyQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+	background-size: contain;
+}
+
+#scoreboard {
+	background: rgba(21, 44, 244, 0.54);
+	border: 3px solid rgba(122, 149, 248, 0.84);
+	box-shadow: 0px 4px 4px rgba(175, 192, 255, 0.2);
+}
+
+.score {
+	background: rgba(79, 106, 174, 0.48);
+	border: 1px solid rgba(94, 255, 255, 0.69);
+	box-shadow: 0px 4px 4px rgba(94, 255, 255, 0.25);
+	border-radius: 8px;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 100px;
+}
+
+.scoreTitle {
+	font-size: 60px;
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 0px 2px 10px rgba(255, 255, 255, 0.71);
+}
+
+.derekbutton {
+	background-color: rgba(21, 44, 244, 0.54);
+	color: white;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 0px 4px 5px rgba(255, 255, 255, 0.25);
+	border-radius: 3px;
+}
+
+.derekbuttonCancel {
+	background: rgba(255, 0, 0, 0.46);
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 0px 4px 5px rgba(255, 255, 255, 0.25);
+	border-radius: 3px;
+	color: white;
+}
+
+.derekbuttonCancel:hover {
+	background: rgba(255, 0, 0, 0.30) !important;
+}
+
+.derekbutton:hover {
+	background-color: rgba(21, 43, 244, 0.352) !important;
+}
