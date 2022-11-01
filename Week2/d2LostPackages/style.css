@@ -1,0 +1,79 @@
+body {
+	background: url(https://s3-alpha-sig.figma.com/img/5ecf/cad5/5eb00fd4ad6957bb4e0dad22cdf80a32?Expires=1668384000&Signature=SboZGKlFO4zPkPmdn6IDqqQIoMoJGToCK1Z2CmGfpVE4CESKX5J0hWLH0roNJ0N4hnazmSWhuAIwJxukWe2rC1zTRpZHPgUTeCPBhn5fzTY-7rjJ~oPplctImrHLqtqVeDI2nAvTdp~AFMTKf-wfRQ4ocalFDUusRSQ-ejby1g5e-Nem-FtJxS5AqKa37bDvqWt9u2mfDMppBUksWRR0vHmir7FGy-Z~HHFNsE6aZpDhriV~ElZGn6forTw3XhZvk5r5CYdOjaE~laUMJD7MvKtMjx3CJ6LdHC~23BruNh5DyrudIZpsx0YvNFBVrGab~8z~0IQTQS6FpW~9HjjlQA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+hr {
+	border-top: 4px solid;
+	opacity: 100;
+	padding: 0px;
+}
+
+.btnderek {
+	background-color: white;
+	color: black;
+	border-radius: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+.btnderek:focus {
+	background-color: rgba(0, 255, 0, 1);
+
+}
+
+.btnderek:hover {
+	color: black !important;
+	background-color: rgba(0, 255, 0, 1) !important;
+
+}
+
+
+.mainBody {
+	border: 3px solid white;
+}
+
+.cgreen {
+	color: rgba(0, 255, 0, 1);
+}
+
+
+.package {
+	border: 3px solid white;
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+}
+
+.package .label {
+	background-color: white;
+}
+
+.package:hover {
+	border-color: rgba(0, 255, 0, 1);
+}
+
+.package p {
+	margin: .5rem;
+	font-weight: 500;
+}
+
+.package p:nth-child(odd) {
+	margin: .5rem;
+	color: rgba(0, 255, 0, 1);
+}
+
+.package p:nth-child(even) {
+	text-align: right;
+
+}
+
+.package p:nth-child(4) {
+	width: 20%;
+}

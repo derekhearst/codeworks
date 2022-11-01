@@ -1,0 +1,144 @@
+body {
+	background-color: black;
+	background-size: contain;
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+hr {
+	border-top: 4px solid;
+	opacity: 100;
+	padding: 0px;
+}
+
+.btnderek {
+	background-color: white;
+	color: black;
+	border-radius: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+.btnderek:focus {
+	background-color: rgba(0, 255, 0, 1) !important;
+
+}
+
+.btnderek:hover {
+	color: black !important;
+	animation-name: rainbow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+}
+
+
+
+.mainBody {
+	border: 3px solid white;
+
+}
+
+.cgreen {
+	color: rgba(0, 255, 0, 1);
+}
+
+.packages {
+	background: url(https://s3-alpha-sig.figma.com/img/cdac/6c71/e4e147bf656b116edc8b6a13ef5092c1?Expires=1668384000&Signature=Is4DyiECQHQDs8TGirIxZKU7DIczFgqUEMuZHi1L3IdcWF3xkvHjQ9~HCz-UmAADLHS2KP-3kRrMvM3DN0~x7nb7s40WAxzKUDG71hZnrix4Vrs6quqWTPvjMw9TTEEJ7GdqdVHE7qgSckiYNMO0-4nRlywFrjRhK61onydb4xZlXlkBcMzlXkc01GOioGMwrthRVNRi1L0uZO0a7hzxTmWR5BWEbvi5XGGdnDQqWtGDPOHHzlGZorTN54CvP~4u15VSSV442CSj4hCBpi9Npib8lOBfl8sXumNpcqI83ps9UGOuR5-~SVXjB5fQiNmVj4sBqqxkOd7ljvUbLH4tIg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+	background-size: cover;
+	padding: 3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	justify-items: center;
+	gap: 3rem;
+}
+
+.package {
+	background: url(https://s3-alpha-sig.figma.com/img/b3c0/e803/03e591f0a331be93ef7d97d2b6eeed83?Expires=1668384000&Signature=ROp2WXoRqG71nmTC6oRrijSwu1bpSsxX9f2O7n2OPKNvjirj~0awSwANsqZw~rxprovIqaGk-TAS71azIzu5GD6SEm-kuSNeKTdD9a29K6iZ~02iDG96Q1TqnMazJxtq3cqfpxeDAYzzAjMDjysUVwTn4TLyA3KMSjPV5CnxnvLliJ6K~apgTSvjpz17YwE2ZkrdQ31yXAXTJDt9usoXa69jR9FpAWgejYjvaR5V4L4mFllcGVjc6vz0ggopfHiwjA9LgBdLvZkV3VBw0oZXi~GHq3FSkJsxPqsZYicwQvMmiiPMFjiUqJYCdkTsWlNLW63DB9Kc~KHXPPA1NDxbxA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+
+
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-right: 20rem;
+	display: flex;
+
+	animation-name: funnyBGScroll;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-direction: normal;
+	animation-timing-function: linear;
+}
+
+.package:hover .label {
+	animation-name: rainbow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.label {
+	padding: 1rem;
+	background-color: white;
+	min-width: 300px;
+
+}
+
+.label div {
+	display: flex;
+	flex-direction: row;
+}
+
+.label div p:nth-child(odd) {
+	margin-right: 1rem;
+}
+
+.label div p:nth-child(even) {
+	margin-right: 1rem;
+	font-weight: bold;
+}
+
+
+.package:hover {
+	outline: 3px solid rgba(0, 255, 0, 1);
+}
+
+.package p {
+	font-weight: 500;
+	font-size: 16px;
+	color: black;
+
+}
+
+@keyframes rainbow {
+	from {
+		background-color: red;
+	}
+
+	50% {
+		background-color: blue;
+	}
+
+	to {
+		background-color: green;
+	}
+}
+
+@keyframes funnyBGScroll {
+	from {
+		background-position-y: 0px;
+
+	}
+
+	to {
+		background-position-x: 697px;
+	}
+}

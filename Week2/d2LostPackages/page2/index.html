@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<a class="text-black bg-white " href="/index.html">Design 1</a>
+	<main class="container-fluid">
+		<section class="row p-2">
+			<div class="col bg-black text-light px-4 py-2 mainBody">
+
+				<!-- SECTION Title -->
+				<section class="row">
+					<div class="col-auto p-0"><span class="cgreen text-capitalize">Program: </span> warehouse manager
+					</div>
+				</section>
+
+				<!-- SECTION Labels -->
+				<section class="row mt-4">
+					<div class="col-auto ps-0">Filter:</div>
+					<!-- <div class="col-auto"><input class="form-check-input me-3" type="checkbox"><label>Reverse?</label></div> -->
+					<div class="col-auto"><button class="btn btnderek" onclick="filterNone()">NONE</button></div>
+					<div class="col-auto"><button class="btn btnderek" onclick="filterWeight()">HEAVY</button></div>
+					<div class="col-auto"><button class="btn btnderek" onclick="filterPriority()">PRIORITY</button>
+					</div>
+					<div class="col-auto"><button class="btn btnderek" onclick="filterFragile()">FRAGILE</button></div>
+				</section>
+
+				<!-- SECTION PACKAGES Label -->
+				<section class="row justify-content-center align-items-center py-4 cgreen">
+					<div class="col-auto flex-grow-1 p-0">
+						<hr>
+					</div>
+					<div class="col-auto">PACKAGES</div>
+					<div class="col-auto flex-grow-1 p-0">
+						<hr>
+					</div>
+				</section>
+				<!-- SECTION Packages -->
+
+				<section class="row">
+					<div class="col packages" id="packageArea">
+						<div class="package">
+							<div class="label">
+								<div>
+									<p>TO:</p>
+									<p>Harrington</p>
+								</div>
+								<div>
+									<p>ID:</p>
+									<p>1342Kjs</p>
+								</div>
+								<div>
+									<p>Weight:</p>
+									<p>1342Kjs</p>
+								</div>
+								<div>
+									<p>Priority:</p>
+									<p>1342Kjs</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</section>
+	</main>
+
+	<!-- Bootstrap JavaScript Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+		</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+		</script>
+	<script src="./app.js"></script>
+</body>
+
+</html>
