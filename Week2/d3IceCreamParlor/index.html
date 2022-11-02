@@ -10,17 +10,116 @@
 	<!-- Bootstrap CSS v5.2.1 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
-	<header>
-		<!-- place navbar here -->
+<body class="">
+	<header class="text-center">
+		<h1>Dereks Ice Cream Parlor</h1>
 	</header>
-	<main>
+	<main class="container-fluid">
+		<div class="row p-4">
+			<!-- SECTION CART -->
+			<div class="col-6 bg-white fs-3 shadow text-dark d-flex flex-column">
+				<!-- Table Header -->
+				<div class="row text-primary pt-1 fw-semibold">
+					<div class="col-5 flex-grow-1">Name</div>
+					<div class="col">Qty</div>
+					<div class="col">Each</div>
+					<div class="col">Total</div>
+				</div>
+
+				<!-- TABLE DEVIDER -->
+				<div class="row">
+					<div class="col p-0">
+						<hr class="m-0 mb-4 my-2">
+					</div>
+				</div>
+
+				<!-- CART ITEMS -->
+				<div class="row fs-4" id="cartItems">
+					<div class="col-12">
+						<!-- <div class="row cartItem" onclick="removeItem('name')">
+							<div class="col-5 flex-grow-1">Strawberry</div>
+							<div class="col">2</div>
+							<div class="col">$4</div>
+							<div class="col">$8</div>
+						</div> -->
+
+					</div>
+				</div>
+
+				<!-- TOTAL -->
+				<div class="row total justify-content-end">
+					<div class="col-auto">
+						<p class="m-0 p-1">Total : $<span class="text-primary" id="totalnum">0</span></p>
+					</div>
+				</div>
+				<div class="row p-1 justify-content-end">
+					<div class="col-auto">
+						<button class="btn btn-primary" onclick="pay()">PAY</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- SECTION Items To Add -->
+			<div class="col-6 ps-4">
+				<div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12">
+								<h1 class="text-decoration-underline">Toppings</h1>
+							</div>
+						</div>
+						<div class="row" id="toppings">
+							<div class="col-3 m-1 bg-white rounded shadow p-2 addItem" onclick="addItem()">
+								<img class="img-fluid rounded"
+									src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg" alt="">
+								<div class="card-body text-center">
+									<p class="m-0">Sprinkles</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h1 class="text-decoration-underline">Vessels</h1>
+							</div>
+						</div>
+						<div class="row" id="vessels">
+							<div class="col m-1 bg-white rounded shadow p-2">
+								<img class="img-fluid rounded"
+									src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg" alt="">
+								<div class="card-body text-center">
+									<p class="m-0">Sprinkles</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h1 class="text-decoration-underline">Ice Cream</h1>
+							</div>
+						</div>
+						<div class="row" id="icecream">
+							<div class="col m-1 bg-white rounded shadow p-2">
+								<img class="img-fluid rounded"
+									src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg" alt="">
+								<div class="card-body text-center">
+									<p class="m-0">Sprinkles</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</main>
-	<footer>
+
+	<footer class="container-fluid">
 		<!-- place footer here -->
 	</footer>
 	<!-- Bootstrap JavaScript Libraries -->

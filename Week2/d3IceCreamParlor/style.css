@@ -1,0 +1,102 @@
+:root {
+	--bg: #fff3c8;
+	--shadow: #A1BD8C;
+	--text: #006D5E;
+	--accent: #D1D8A7;
+	--primary: #F3944C;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+}
+
+h1 {
+	font-family: 'Indie Flower', cursive;
+	font-size: 300%;
+	font-weight: 600;
+}
+
+hr {
+	border-top: 5px solid grey;
+	padding: 0;
+}
+
+.bg {
+	background-color: var(--bg);
+}
+
+.accent {
+	background-color: var(--accent);
+}
+
+.textp {
+	color: var(--primary);
+}
+
+
+.cartItem {
+	padding: 1em;
+	border-top: 1px solid #cbcbcb;
+	border-bottom: 1px solid #cbcbcb;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.cartItem:hover {
+	background-color: red !important;
+	cursor: pointer;
+
+}
+
+.cartItem:hover::before {
+
+	content: "Remove?";
+	color: black;
+	position: absolute;
+	background-color: red;
+	width: 8em;
+
+}
+
+.cartItem:nth-child(odd) {
+	background-color: #f1f1f1;
+
+}
+
+.cartImage {
+	height: 15vh;
+	background-size: contain;
+	background-position: 50% 50%;
+}
+
+.total {
+	margin-top: auto;
+	background-color: #f1f1f1;
+	border-top: 1px solid #cbcbcb;
+
+}
+
+.total+div {
+	background-color: #f1f1f1;
+
+}
+
+#totalNum {
+	color: var(--primary);
+}
+
+.addItem {
+	max-height: 15rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+
+}
+
+.addItem img {
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+}
