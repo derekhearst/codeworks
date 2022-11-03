@@ -100,6 +100,7 @@ function drawCart() {
 }
 
 function populateItems() {
+
 	toppingsElm = document.getElementById("toppings")
 	template = ''
 	toppings.forEach(topping => {

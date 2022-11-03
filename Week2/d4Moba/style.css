@@ -1,0 +1,230 @@
+main {
+	background: grey url(https://s3-alpha-sig.figma.com/img/ce1c/3506/e5accc256842368ef213d73c0db78531?Expires=1668384000&Signature=JmWNsJ~2EYi0jsgDXEShpn9GDr0163ZEHHdmXUhrgv-N9cQTJvsqG5IuCLf8xtaPkMDL0v5wD4J8lJqZM8DIY3x0Nxin8ocs~I9CjyT9yTYTPSGnMB0~YsNzqIgpq~FVxI6ZQpiNLLQFwWPmMQnY-YMndDDl~kavqRPBX0MEmADe0YzIiah4ch17zICgHjco3-W0qD40THDTKxXG0M9KUANSy-xw91AoUD7tANM~G9E-pwBRQTBD15kbeF-R8ato2m7s5jNpdB5gCBiDhiCUFyuhgqXRcqtlFdZCWlvIeodBPkarN8v6s2nHl7ahkwyiM-utHTy07HqrJu0X~i~n1g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-size: 80%;
+
+}
+
+.characters {
+	display: flex;
+	flex-direction: row;
+	height: 30%;
+	box-sizing: border-box;
+	padding: 20%;
+	gap: 30px;
+}
+
+.character {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 8px;
+	background-color: grey;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	animation-name: hurt;
+	animation-duration: 500ms;
+	animation-play-state: paused;
+	height: min-content;
+}
+
+@keyframes hurt {
+	from {
+		background-color: grey;
+	}
+
+	50% {
+		background-color: red;
+	}
+
+	to {
+		background-color: grey;
+	}
+}
+
+
+
+.chead {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.chead h3 {
+	font-size: large;
+}
+
+.cbody {
+	padding: 0px 5px 0px 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: medium;
+}
+
+.health {
+	color: red;
+}
+
+.xp {
+	color: green;
+}
+
+.cfooter {
+	padding: 0px 5px 0px 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: medium;
+}
+
+.character img {
+	height: 60px;
+	width: max-content;
+}
+
+.bosscontainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40%;
+	padding: 0;
+}
+
+.boss {
+	height: 100%;
+	width: 50%;
+	padding: 10px;
+	background-image:
+		linear-gradient(to top, transparent, rgba(0, 0, 0, 0.973)), url(https://static.vecteezy.com/system/resources/previews/007/243/548/original/boxing-ring-background-concept-free-vector.jpg);
+	background-size: contain;
+	background-size: 100%;
+}
+
+
+
+.boss {
+	text-align: center;
+	border: 2px solid white;
+	border-radius: 5px;
+
+	animation-name: hurtBorder;
+	animation-duration: 500ms;
+	animation-play-state: running;
+}
+
+#bossName {
+	font-family: 'Press Start 2P', cursive;
+	font-size: xx-large;
+	font-weight: 600;
+	margin: 0;
+	height: 20%;
+
+	animation-name: hurtText;
+	animation-duration: 500ms;
+	animation-play-state: running;
+
+}
+
+#bossBar {
+	background-color: red;
+	height: 10%;
+
+}
+
+.boss-pic {
+	max-width: 100%;
+	height: 70%;
+	user-select: none;
+
+}
+
+.character-border {
+	border: 4px solid white;
+	border-radius: 5px;
+
+}
+
+
+.menuSection {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	height: 30%;
+	box-sizing: border-box;
+	padding: 10px;
+	justify-content: space-between;
+}
+
+.menu {
+	height: min-content;
+	background-color: grey;
+	border: 4px solid white;
+	border-radius: 5px;
+	padding: 10px;
+	width: 30%;
+}
+
+.menuItem {
+	cursor: pointer;
+	user-select: none;
+	color: white;
+	display: flex;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 24px;
+	justify-content: space-between;
+}
+
+.cursorNone {
+	cursor: default;
+}
+
+#startStopButton {
+	background-color: red;
+	border: 4px solid white;
+	border-radius: 5px;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 40px;
+	color: white;
+	text-transform: uppercase;
+}
+
+@keyframes hurtText {
+	from {
+		color: white;
+	}
+
+	50% {
+		color: red !important;
+	}
+
+	to {
+		color: white;
+	}
+}
+
+@keyframes hurtBorder {
+	from {
+		border-color: white;
+	}
+
+	50% {
+		border-color: red !important;
+	}
+
+	to {
+		border-color: white;
+	}
+}
+
+.gold {
+	color: gold;
+}
