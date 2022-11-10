@@ -1,6 +1,6 @@
 import { Pop } from "./Pop.js"
 
-const APP_NAME = "ltFall22_gregsList"
+const APP_NAME = "d4FruitSalad"
 
 export function saveState(key, value) {
   try {

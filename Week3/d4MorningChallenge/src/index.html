@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="/dist/output.css" />
+</head>
+
+<body class="flex flex-col p-6 gap-4 bg-slate-900 text-white items-center">
+	<form class="flex border-lime-400 border-2 p-1 justify-center items-center gap-3" onsubmit="calcTime()">
+		<input class="text-purple-900 shadow-lg" type="date" id="dateInput" />
+		<button class="bg-slate-800  shadow-md rounded-md p-1 h-full text-purple-500">How long ago was this?</button>
+	</form>
+	<h1 class="text-6xl text-white/80 subpixel-antialiased">
+		That was <span id="output">0</span> days ago
+	</h1>
+</body>
+<script src="app.js"></script>
+
+</html>
