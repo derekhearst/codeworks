@@ -7,7 +7,6 @@ function _endGame() {
     appState.activeFruit = ''
     appState.gameRunning = false
     appState.activePlayer.score = 0
-    appState.activePlayer = null
     appState.emit('players')
     saveState('players', appState.players)
 }
@@ -29,6 +28,7 @@ class PlayersService {
         }
         console.log(player);
         appState.activePlayer = player
+        appState.emit("players")
         this.startGame()
     }
 
