@@ -7,7 +7,7 @@ import { setHTML, setText } from "../Utils/Writer.js";
 
 function _drawPlayers() {
 	let template = ''
-	appState.players.sort((b, a) => a.score - b.score)
+	appState.players.sort((a, b) => b.highScore - a.highScore)
 	appState.players.forEach(p => template += p.ListTemplate)
 	setHTML("playerList", template)
 }

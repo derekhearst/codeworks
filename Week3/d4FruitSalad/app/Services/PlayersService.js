@@ -7,6 +7,7 @@ function _endGame() {
     appState.activeFruit = ''
     appState.gameRunning = false
     appState.activePlayer.score = 0
+    appState.activePlayer = null
     appState.emit('players')
     saveState('players', appState.players)
 }
@@ -19,8 +20,8 @@ class PlayersService {
 
     addPlayer(name) {
         let player = ''
-        let duplicate = appState.players.find(p => p.name = name)
-        if (duplicate) {
+        let duplicate = appState.players.find(p => p.name == name)
+        if (duplicate != undefined) {
             player = duplicate
         } else {
             player = new Player({ name })
@@ -36,11 +37,11 @@ class PlayersService {
             if (word == appState.activeFruit) {
                 appState.activeFruit = appState.fruits.at(Math.floor(Math.random() * appState.fruits.length))
                 appState.activePlayer.score++
-                appState.emit("activePlayer")
-                appState.emit('players')
                 if (appState.activePlayer.highScore <= appState.activePlayer.score) {
                     appState.activePlayer.highScore = appState.activePlayer.score
                 }
+                appState.emit("activePlayer")
+                appState.emit('players')
             }
         }
     }
