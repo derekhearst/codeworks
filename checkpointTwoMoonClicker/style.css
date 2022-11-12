@@ -1,0 +1,277 @@
+body {
+	background: url(https://wallpaperaccess.com/full/3010046.jpg);
+	background-size: cover;
+	min-height: 100vh;
+	font-family: 'Press Start 2P', cursive;
+	display: flex;
+	flex-direction: column;
+	margin-right: 5%;
+	margin-left: 5%;
+	user-select: none;
+}
+
+@media only screen and (min-width: 600) {
+	footer {
+		margin-right: 20%;
+		margin-left: 20%;
+	}
+}
+
+header {
+	text-align: center;
+	padding-top: .5em;
+	display: flex;
+	justify-content: space-between;
+
+	font-size: xx-large;
+	color: white;
+	font-weight: 800;
+	text-shadow: 0px 3px 0px orange;
+}
+
+.headerButton {
+	font-size: small;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	padding: .3em;
+	background-color: #59c7f6;
+	color: white;
+	border: 1px solid #61a8ea;
+	border-bottom: 4px solid #61a8ea;
+	border-radius: 5px;
+	transition: all 0.05s ease;
+}
+
+.headerButton:hover {
+	transform: translateY(-2px);
+}
+
+.headerButton:active {
+	transform: translateY(2px);
+}
+
+
+main {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+main img {
+	animation-name: spinMoon;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transition: all 0.03s ease;
+}
+
+main img:active {
+	scale: .9;
+}
+
+
+
+@keyframes spinMoon {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+
+
+}
+
+
+
+footer {
+	flex-grow: 0;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding-bottom: .5em;
+
+}
+
+.topArea {
+	height: 30%;
+	width: 60%;
+
+	display: flex;
+	align-items: flex-end;
+	color: white;
+	font-size: small;
+	box-sizing: border-box;
+}
+
+.topArea>div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	border-bottom: 2px solid #fdd982;
+	border: 1px solid #fdd982;
+
+
+}
+
+.topArea div i {
+	font-size: 180%;
+}
+
+.clickShow {
+	width: 25%;
+	background-color: #feaa3f;
+	height: 50%;
+	border-top-left-radius: 15px;
+}
+
+.moneyShow {
+	background-color: #fec942;
+	width: 50%;
+	height: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	font-size: 140%;
+}
+
+.autoShow {
+	width: 25%;
+	height: 50%;
+	background-color: #feaa3f;
+	border-top-right-radius: 15px;
+}
+
+.mainCard {
+	border-radius: 10px;
+	box-shadow: 3px -1px 3px rgba(0, 0, 0, 0.116);
+	position: relative;
+	z-index: 2;
+	height: 70%;
+	background: linear-gradient(90deg, rgba(255, 204, 74, 1) 0%, rgba(241, 175, 7, 1) 100%);
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 1%;
+	gap: .3em;
+}
+
+.displayArea {
+	width: 100%;
+	background-color: #f8b508;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #f9d067;
+	box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.223);
+
+	display: flex;
+	gap: 1em;
+	justify-content: space-between;
+}
+
+.cardSection {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	font-size: x-small;
+}
+
+.cardList {
+	width: 100%;
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+}
+
+/*  SECTION UPGRADES */
+.upgrade {
+	user-select: none;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .5em;
+	color: white;
+	box-sizing: content-box;
+}
+
+.upgrade button {
+	user-select: none;
+	min-width: 6em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	padding: .3em;
+	background-color: #59c7f6;
+	color: white;
+	border: 1px solid #61a8ea;
+	border-bottom: 4px solid #61a8ea;
+	border-radius: 5px;
+	transition: all 0.05s ease;
+}
+
+
+.upgrade button:hover {
+	transform: translateY(-2px);
+}
+
+.upgrade button:active {
+	transform: translateY(2px);
+}
+
+
+.upgrade button:disabled {
+	transform: translateY(2px);
+}
+
+
+.upgrade button i {
+	font-size: 24px;
+	margin-top: -.5em;
+	margin-bottom: -.38em;
+}
+
+/* SECTION Upgrades */
+
+.stat {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+}
+
+.stat i {
+	font-size: 18px;
+	margin-top: -.3em;
+	margin-bottom: -.2em;
+}
+
+.statCount {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: .4em;
+}
+
+
+.statTitle {
+	opacity: .9;
+	font: x-small;
+}
+
+.statBox {
+	padding: .3em;
+	border: 1px solid white;
+	border-radius: 5px;
+	text-align: center;
+
+}

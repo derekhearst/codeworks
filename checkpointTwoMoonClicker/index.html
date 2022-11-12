@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Moon Clicker</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+
+</head>
+
+<body>
+
+	<header>
+		<div class="w-25" id="highScore">000000</div>
+		<div class="w-50">Moon Miner</div>
+		<div class="d-flex w-25 justify-content-end gap-2">
+			<button id="Save" class="headerButton" onclick="save()">Save</button>
+			<button id="Load" class="headerButton" onclick="load()">Load</button>
+		</div>
+	</header>
+	<main>
+
+		<img src="https://www.freeiconspng.com/thumbs/moon-png/moon-png-no-background-15.png" alt="moon"
+			onclick="mine()">
+
+
+	</main>
+
+	<footer>
+		<div class="topArea">
+			<div class="clickShow">
+				<i class="mdi mdi-pickaxe"></i>
+				<i class="mdi mdi-power"></i>
+				<div id="clickPower">4</div>
+			</div>
+			<div class="moneyShow">
+				<i class="mdi mdi-cheese"></i>
+				<div id="moneyDisplay">350</div>
+			</div>
+			<div class="autoShow">
+				<i class="mdi mdi-cheese"></i>
+				<i class="mdi mdi-timer"></i>
+
+				<div id="autoPower">4</div>
+			</div>
+		</div>
+		<div class="mainCard">
+			<div class="displayArea">
+
+				<div class="cardSection">
+					<div class="cardTitle">Click Upgrades</div>
+					<div class="cardList" id="clickUpgradeSection">
+						<div class="upgrade">
+							<button>50<i class="mdi mdi-cheese"></i></button>
+							<div class="upgradeText">Drill +5</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cardSection">
+					<div class="cardTitle">Automatic Upgrades</div>
+					<div class="cardList" id="autoUpgradeSection">
+						<div class="upgrade">
+							<button>50<i class="mdi mdi-cheese"></i></button>
+							<div class="upgradeText">Drill +5</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="displayArea">
+
+				<div class="cardSection">
+					<div class="cardTitle">Click Stats</div>
+					<div class="cardList" id="clickStatsSection">
+						<div class="stat">
+							<div class="statCount">
+								<div class="statBox">20</div>
+								<div class="statTitle">Knive</div>
+							</div>
+							<i class="mdi mdi-arrow-right"></i>
+							<div class="statBox">20</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="cardSection">
+					<div class="cardTitle">Automatic Stats</div>
+					<div class="cardList" id="autoStatsSection"></div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</footer>
+	<!-- Bootstrap JavaScript Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+		</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+		</script>
+
+	<script src="app.js"></script>
+	<audio src="./Interstellar - Main Theme [Extended] - Hans Zimmer.mp3" autoplay="true"></audio>
+</body>
+
+</html>

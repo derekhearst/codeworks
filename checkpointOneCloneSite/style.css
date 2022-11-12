@@ -1,0 +1,56 @@
+body {
+	background-color: #EAEAEA;
+}
+
+.bcolor-primary {
+	background-color: #07AB80;
+	background: radial-gradient(circle, rgba(7, 171, 128, 1) 80%, rgba(7, 147, 110, 1) 100%);
+
+}
+
+.color-primary {
+	color: #07ab80;
+}
+
+.hero {
+	background: #000000b1 url(https://media3.giphy.com/media/14SAx6S02Io1ThOlOY/giphy.gif);
+	background-blend-mode: darken;
+	background-size: cover;
+}
+
+.coolfont {
+	font-family: 'Aldrich', sans-serif;
+}
+
+.vr {
+	width: 10px;
+	color: #07AB80;
+	opacity: 100;
+}
+
+.fs-7 {
+	font-size: small;
+}
+
+.specialcheck {
+	width: 6%;
+}
+
+.fs-verylarge {
+	font-size: 50px;
+}
+
+
+@media (min-width: 768px) {
+	.downset {
+		transform: translateY(50px);
+	}
+
+	.mb-n5 {
+		margin-bottom: -3rem !important;
+	}
+
+	.mt-n3 {
+		margin-bottom: -2rem !important;
+	}
+}
