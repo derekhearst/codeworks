@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-image: url(https://media.istockphoto.com/id/1144130818/vector/purple-brick-wall.jpg?s=612x612&w=0&k=20&c=F2TpL5aW5bdHgu0ApjtTJNBzJKlMhKxEumCvNc1wru8=);
+	background-size: cover;
+}
+
+
+
+.glow {
+	box-shadow: 0rem 0rem 2rem var(--tw-shadow-color);
+}
+
+.glowHover:hover {
+	box-shadow: 0rem 0rem 2rem var(--tw-shadow-color);
+
+}
