@@ -2,8 +2,8 @@
 	import { createEventDispatcher } from "svelte"
 	export let data
 	let answers = [...data.incorrect_answers, data.correct_answer]
-	let colors = ["bg-blue-900", "bg-lime-900", "bg-red-900", "bg-yellow-900"]
-	let colors2 = ["shadow-blue-900", "shadow-lime-900", "shadow-red-900", "shadow-yellow-900"]
+	let colors = ["bg-blue-700", "bg-lime-700", "bg-red-700", "bg-yellow-700"]
+	let colors2 = ["shadow-blue-700", "shadow-lime-700", "shadow-red-700", "shadow-yellow-700"]
 
 	answers.sort((a, b) => 0.5 - Math.random())
 	const dispatch = createEventDispatcher()
