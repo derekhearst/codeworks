@@ -1,1 +1,51 @@
 /* BASIC STYLES HERE */
+
+body {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+#addArea {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	flex: 1 1 auto;
+	max-width: 30%;
+	padding: 1rem;
+}
+
+#addArea form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+#newGifs {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+#newGifs img {
+	cursor: pointer;
+}
+
+#giftsList {
+	display: flex;
+	flex-wrap: 1;
+	gap: 2rem;
+	flex: 2 1 auto;
+}
+
+#giftsList img {
+	flex: auto;
+	max-width: 30%;
+	height: auto;
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
