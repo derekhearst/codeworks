@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galaxies",
+  "info": {
+    "singularName": "galaxy",
+    "pluralName": "galaxies",
+    "displayName": "Galaxy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "stars": {
+      "type": "integer"
+    },
+    "planets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::planet.planet",
+      "mappedBy": "galaxy"
+    }
+  }
+}

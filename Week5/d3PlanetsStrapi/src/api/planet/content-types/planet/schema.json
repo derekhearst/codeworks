@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "planets",
+  "info": {
+    "singularName": "planet",
+    "pluralName": "planets",
+    "displayName": "Planet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "biome": {
+      "type": "string",
+      "required": true
+    },
+    "atmosphere": {
+      "type": "boolean",
+      "required": true
+    },
+    "galaxy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::galaxy.galaxy",
+      "inversedBy": "planets"
+    },
+    "moons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::moon.moon",
+      "mappedBy": "planet"
+    },
+    "colonies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::colony.colony",
+      "mappedBy": "planet"
+    }
+  }
+}

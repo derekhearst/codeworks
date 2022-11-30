@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moons",
+  "info": {
+    "singularName": "moon",
+    "pluralName": "moons",
+    "displayName": "Moon"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "planet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::planet.planet",
+      "inversedBy": "moons"
+    }
+  }
+}

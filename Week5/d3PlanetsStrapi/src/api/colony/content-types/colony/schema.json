@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colonies",
+  "info": {
+    "singularName": "colony",
+    "pluralName": "colonies",
+    "displayName": "Colony"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "population": {
+      "type": "integer",
+      "required": true
+    },
+    "planet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::planet.planet",
+      "inversedBy": "colonies"
+    },
+    "species": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::specie.specie",
+      "mappedBy": "colony"
+    }
+  }
+}
