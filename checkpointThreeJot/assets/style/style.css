@@ -1,0 +1,177 @@
+/* BASIC STYLES HERE */
+
+
+
+#loginMenu {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	background-color: #22223b;
+
+
+	/* REMOVE THIS */
+	/* visibility: hidden; */
+
+}
+
+#loginMenu h1 {
+	justify-self: flex-start;
+	font-size: 10rem;
+	margin-bottom: clamp(0px, 20vh, 1000px);
+}
+
+#loginMenu form input {
+	border-radius: .5rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: auto;
+	padding: 1.5rem;
+	background-color: #22223b;
+}
+
+.logoCircle {
+	border: .2rem solid white;
+	width: 3.5rem;
+	height: 3.5rem;
+	font-size: 2.5rem;
+	border-radius: 99999px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* #region Note List popover */
+#noteDisplay {
+	visibility: hidden;
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.633);
+	height: 100vh;
+	width: 100vw;
+
+}
+
+.noteList {
+	background-color: #36364c;
+	width: clamp(30vw, 40vw, 90vw);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.darkArea {
+	flex-grow: 1;
+	height: 100vh;
+}
+
+.noteButton {
+	background-color: transparent;
+	/* border: 1px solid white; */
+	border: 0;
+}
+
+.noteNameInput {
+	background-color: transparent;
+	font-size: 1.5rem;
+	width: 60%;
+	border: 0px;
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+.noteNameInput::placeholder {
+	color: rgba(255, 255, 255, 0.704);
+	font-size: 1.5rem;
+}
+
+.noteColorInput {
+	height: 2rem;
+	width: 2rem;
+	border: 1px solid white;
+	border-radius: 10000px;
+	cursor: pointer;
+}
+
+.noteColorInput::-webkit-color-swatch {
+	border: none;
+	border-radius: 50%;
+}
+
+.noteformAdd {
+	width: auto;
+	height: 100%;
+	position: relative;
+	border: 0px;
+	background-color: white;
+}
+
+.noteformAdd i {
+	position: absolute;
+	font-size: 2rem;
+	top: -.45rem;
+	left: -.3rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.noteformAdd i.mdi::before {
+	position: absolute;
+	top: -.2rem;
+	left: .23rem;
+}
+
+.noteformAdd div {
+	padding-left: 2rem;
+	font-weight: 600;
+}
+
+/* #endregion */
+
+
+.noteSection {
+	border: 2px solid #9a8c98;
+	padding: 2rem;
+	margin: 2rem;
+	border-radius: .5rem;
+	display: flex;
+	gap: 1rem;
+	height: 100%;
+}
+
+.noteDetails p {
+	opacity: 90%;
+	font-size: .8rem;
+}
+
+.noteDetails h1 {
+	opacity: 100%;
+	color: white;
+	font-weight: 600;
+}
+
+.noteDetails button {
+	width: 100%;
+	border-radius: .5em;
+}
+
+textarea {
+	flex-grow: 1;
+	height: 100%;
+}
