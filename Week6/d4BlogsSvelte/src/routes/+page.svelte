@@ -30,7 +30,10 @@
 					</div>
 					<p class="text-xs">{blog.creator.name}</p>
 				</div>
-				<p class="flex-1 border-y-2">{blog.body}</p>
+				<div class="flex-1 border-y-2 flex">
+					<p class="flex-1">{blog.body}</p>
+					<img src={blog.imgUrl} class=" h-40 object-cover" />
+				</div>
 				<div class="flex justify-between items-center">
 					<a href="/{blog.id}">READ MORE</a>
 					<sub class="">{blog.updatedAt}</sub>
