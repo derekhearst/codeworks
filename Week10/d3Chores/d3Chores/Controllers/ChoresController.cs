@@ -6,11 +6,13 @@ public class Chores : ControllerBase
 {
 	ChoresService _cs;
 	Auth0Provider _ap;
+	AccountService _ac;
 
-	public Chores(ChoresService cs, Auth0Provider ap)
+	public Chores(ChoresService cs, Auth0Provider ap, AccountService ac)
 	{
 		_cs = cs;
 		_ap = ap;
+		_ac = ac;
 	}
 
 
@@ -29,6 +31,21 @@ public class Chores : ControllerBase
 		}
 	}
 
+	[HttpGet("{id}")]
+	[Authorize]
+	public ActionResult<Chore> GetById(int id)
+	{
+		try
+		{
+			Chore found = _cs.GetById(id);
+			return Ok(found);
+		}
+		catch (Exception e)
+		{
+			return BadRequest(e.Message);
+		}
+	}
+
 	[HttpPost]
 	[Authorize]
 	public async Task<ActionResult<Chore>> Create([FromBody] Chore newChore)
@@ -36,6 +53,7 @@ public class Chores : ControllerBase
 		try
 		{
 			Account user = await _ap.GetUserInfoAsync<Account>(HttpContext);
+			_ac.GetOrCreateProfile(user);
 			newChore.user_id = user.Id;
 			return Ok(_cs.Create(newChore));
 		}

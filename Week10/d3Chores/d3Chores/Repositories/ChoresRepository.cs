@@ -11,12 +11,25 @@ public class ChoresRepository
 
 	public List<Chore> Get(string userId)
 	{
-		return _db.Query<Chore>("SELECT * FROM chores WHERE user_id = @userId", new { userId }).ToList();
+		return _db.Query<Chore, Account, Chore>("SELECT * FROM chores JOIN accounts sc on user_id = sc.id  WHERE user_id = @userId",
+		(Chore chore, Account account) =>
+		{
+			chore.user = account;
+			return chore;
+		},
+		new { userId }
+		).ToList();
 	}
 
 	public Chore GetById(int id)
 	{
-		return _db.QueryFirstOrDefault<Chore>("SELECT * FROM chores WHERE id = @id", new { id });
+		return _db.Query<Chore, Account, Chore>("SELECT * FROM chores ch JOIN accounts ac on user_id = ac.id  WHERE ch.id = @id",
+		(Chore chore, Account account) =>
+		{
+			chore.user = account;
+			return chore;
+		},
+		new { id }).FirstOrDefault();
 	}
 
 	public Chore Create(Chore newChore)
@@ -27,6 +40,9 @@ public class ChoresRepository
 		SELECT LAST_INSERT_ID();
 		", newChore);
 		newChore.Id = id;
+
+		Account user = _db.QueryFirstOrDefault<Account>("SELECT * FROM accounts WHERE id = @id", new { id = newChore.user_id });
+		newChore.user = user;
 		return newChore;
 	}
 
@@ -39,7 +55,7 @@ public class ChoresRepository
 			completed = @completed
 		WHERE id = @id
 		", updatedCore);
-		return updatedCore;
+		return GetById(updatedCore.Id);
 	}
 
 	public bool Delete(int id)
