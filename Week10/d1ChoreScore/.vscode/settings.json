@@ -1,0 +1,17 @@
+{
+	"sqltools.connections": [
+		{
+			"mysqlOptions": {
+				"authProtocol": "default"
+			},
+			"previewLimit": 50,
+			"server": "SG-TestDB-7110-mysql-master.servers.mongodirector.com",
+			"port": 3306,
+			"driver": "MySQL",
+			"name": "TestDB",
+			"username": "sgroot",
+			"password": "Lze1T56I@qv6gVak",
+			"database": "TestDB"
+		}
+	]
+}

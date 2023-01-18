@@ -4,11 +4,11 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 
-	let cars: any[] = [];
-	onMount(async () => {
-		const { data, error } = await supabaseClient.from('cars').select('*');
-		cars = data ?? [];
-	});
+	// let cars: any[] = [];
+	// onMount(async () => {
+	// 	const { data, error } = await supabaseClient.from('cars').select('*');
+	// 	cars = data ?? [];
+	// });
 
 	async function makeCar(e) {
 		const { data: Car } = await supabaseClient
@@ -22,12 +22,13 @@
 				// user_id: data.session?.user.id
 			})
 			.select();
-		cars = [...cars, Car[0] || {}];
+		data.cars = [...data.cars, Car[0] || {}];
 	}
+	
 
 	async function remove(id) {
 		let res = await supabaseClient.from('cars').delete().eq('id', id);
-		cars = cars.filter((car) => car.id !== id);
+		data.cars = data.cars.filter((car) => car.id !== id);
 	}
 </script>
 
@@ -45,7 +46,7 @@
 	<button type="submit">Make Car</button>
 </form>
 
-{#each cars as car}
+{#each data.cars as car}
 	<div>
 		{car.make}
 		{car.model}
