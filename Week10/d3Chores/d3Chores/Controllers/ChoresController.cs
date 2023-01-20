@@ -54,6 +54,7 @@ public class Chores : ControllerBase
 		{
 			Account user = await _ap.GetUserInfoAsync<Account>(HttpContext);
 			_ac.GetOrCreateProfile(user);
+
 			newChore.user_id = user.Id;
 			return Ok(_cs.Create(newChore));
 		}
